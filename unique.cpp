@@ -6,7 +6,7 @@ int main(){
 	string s,s1,s2;
 	int i,j,k,l;
 	cin >> s;
-	int arr[100];
+	int arr[256];
 	int flag = 0;
 	memset(arr,0,sizeof(arr));
 	for(i=0;i<s.length();i++){
