@@ -10,8 +10,10 @@ void replace(string &s1, int l){
 		if(s1[i] == ' ')
 			spaces++;
 	}
+	//cout << spaces << endl;
 	newLenght = spaces*2 + l;
 	s1[newLenght] = '\0';
+	//cout << s1 << endl;
 	for(i=l-1;i>0;i--){
 		if(s1[i] == ' '){
 			s1[newLenght-1] = '0';
@@ -21,6 +23,7 @@ void replace(string &s1, int l){
 		}
 		else{
 			s1[newLenght-1] = s1[i];
+			newLenght--;
 		}
 	}
 }
@@ -29,6 +32,7 @@ int main(){
 	//char s[256];
 	string s1;
 	int l;
+	cout << "Enter true length" << endl;
 	getline(cin, s1);
 	stringstream myStream(s1);
 	myStream >> l;
@@ -36,5 +40,5 @@ int main(){
 	//cout << s1.length() << endl;
 	//cout << s1 << endl;
 	replace(s1, l);
-	cout << s1;
+	cout << s1 << endl;
 }
